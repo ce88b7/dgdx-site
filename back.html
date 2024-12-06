@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>時間管理アプリ</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="app-container">
+    <div class="header">
+        <div class="date-time">
+            <div class="date">2024/10/15 火</div>
+            <div class="time">09:38</div>
+            <div class="question-mark"></div>
+        </div>
+    </div>
+    <div class="time-distribution">
+        <img src="cat_sit_smile.png" alt="Icon" class="record-icon">
+        <div class="spent-time">今日の記録: 5時間30分</div>
+       </div>
+    <div class="cat-report">
+        <div class="speech-bubble">
+            <p>時間管理がちょうど良くできているにゃ〜この調子で頑張るにゃ〜ん♡</p>
+        </div>
+        <img src="cat_sit_smile.png" alt="Cat Character" class="cat-image">
+    </div>
+    <div class="timer">
+        <div class="timer-content">
+            <div class="timer-details">
+                <span class="set-time">5時間50分</span>
+                <span class="task-count">20タスク</span>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 75%;"></div>
+                </div>
+            </div>
+            <img src="stopwatch_time_2146.png" alt="Stopwatch" class="timer-image">
+        </div>
+        <div class="timer-controls">
+            <a href="page.html" style="text-decoration: none;">
+                <button class="break-button">休憩する →</button>
+            </a>
+        </div>
+        
+    </div>
+    
+    
+    
+    
+    <div class="navigation">
+        <button class="home">
+            <i class="fas fa-home"></i> HOME
+        </button>
+        <button class="questionnaire">
+            <i class="fas fa-question-circle"></i> QUESTIONNAIRE
+        </button>
+        <button class="rest">
+            <i class="fas fa-coffee"></i> REST
+        </button>
+    </div>
+    
+</div>
+
+<script>
+function updateTime() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const timeString = `${hours}:${minutes}`;
+    document.querySelector('.time').textContent = timeString;
+}
+
+// ページ読み込み時と1分ごとに時刻を更新
+updateTime();
+setInterval(updateTime, 60000);
+</script>
+
+</body>
+</html>

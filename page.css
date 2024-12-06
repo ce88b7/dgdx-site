@@ -1,0 +1,190 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f9f9f9;
+}
+
+.app-container {
+  max-width: 430px;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #7B516D, #CE88B7);
+  color: white;
+  padding: 10px;
+  height: 50px;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid white; /* 白い円のボーダー */
+  border-radius: 50%; /* 丸くする */
+  margin-right: 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.back-button a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.back-button:hover {
+  background-color: white; /* ホバー時の背景色 */
+  color: #7B516D; /* ホバー時のテキスト色 */
+}
+
+.back-button:hover {
+  background-color: white; /* ホバー時の背景色 */
+  color: #7B516D; /* ホバー時のテキスト色 */
+}
+
+
+.date-time {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.date-time .date, .time {
+  font-size: 14px;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+.timer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.timer-details {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.timer-image img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timer-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  background-color: #E6AACE;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #D391B2;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.settings {
+  padding: 15px;
+  background: white;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.settings label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.settings input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.time-distribution {
+  background: #f1f1f1;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.image-display-section {
+  padding: 15px;
+  margin: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap; /* 画像が複数の場合に折り返す */
+  gap: 10px; /* 画像間のスペース */
+  justify-content: center; /* 中央揃え */
+}
+
+.image-display-section img {
+  max-width: 80px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease; /* 画像のアニメーション */
+}
+
+.image-display-section img:hover {
+  transform: scale(1.1); /* ホバー時に拡大 */
+}
+
+button.reset {
+  background-color: #808080; /* オレンジ系の色 */
+  margin-left: 10px; /* 他のボタンとの間隔 */
+}
+
+button.reset:hover {
+  background-color: #202020; /* ホバー時の色 */
+}
+
+.screen-time {
+  white-space: nowrap; /* 改行を防ぐ */
+  overflow: hidden;    /* 内容がはみ出た場合に隠す */
+  text-overflow: ellipsis; /* はみ出た部分を「…」で省略 */
+}
